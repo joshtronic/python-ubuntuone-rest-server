@@ -1,16 +1,12 @@
-# Ubuntu One SyncDaemon REST API Server
+# Client-side REST Server for interfacing with Ubuntu One
 
 ## What's it do?
 
-Creates a RESTful interface to Ubuntu One's DBus interface that lives on port 3000 and can be utlized to build client side web applications on top of Ubuntu One.
-
-## Why does this exist?
-
-This little server is the result of fighting with the PHP DBus bindings and trying it to work in the local user space. This is a rewrite of a Node.js version I wrote previously to utilize actual DBus bindings instead of relying on parsing the output of dbus-send
+Creates a RESTful interface to Ubuntu One's D-Bus interface that lives on port 3000 and can be utlized to build client side web applications on top of Ubuntu One.
 
 ## How do I run it?
 
-Assuming you already have Python (and any additional libraries) on your system and are running Ubuntu (Only OS I'll be testing this one) then all you need to do is run:
+Assuming you already have Python on your system (and the required libraries) and are running Ubuntu (Only OS I'll be testing this on) then all you need to do is run:
 
 	./ubuntuone.py
 
@@ -24,7 +20,4 @@ The data is returned as JSON
 
 ## What's the future hold?
 
-* Documentation page when calling the server with no path
-* Support for the root object path's methods (connect, disconnect, et cetera)
-* POST methods to push as well as pull data
-* Potentially spinning off this server into a more generic DBus web interface
+Nothing, any future development will be done against my generic D-Bus server available here: https://github.com/joshtronic/python-dbus-rest-server
